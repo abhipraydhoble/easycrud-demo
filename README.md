@@ -1,7 +1,55 @@
+# EKS Cluster Setup
+````
+#!/bin/bash
+
+# Update system
+apt update -y
+
+# Install basic tools
+apt install -y curl unzip
+
+# Install AWS CLI
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+./aws/install
+
+# Install kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+# Install eksctl
+curl --silent --location \
+"https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" \
+| tar xz -C /tmp
+
+mv /tmp/eksctl /usr/local/bin
+chmod +x /usr/local/bin/eksctl
+````
+````
+aws --version
+kubectl version --client
+eksctl version
+````
+**Configure AWS CLI**
+````
+aws configure
+````
+
+**Create Amazon EKS cluster using eksctl**
+````
+eksctl create cluster --name eks-oncdecb36 --region ap-southeast-1 --version 1.34 --nodegroup-name linux-nodes --node-type t3.medium --nodes 1
+````
+**Log In Into EKS cluster**
+````
+aws eks update-kubeconfig --name eks-oncdecb36
+````
+**Delete EKS Cluster**
+````
+eksctl delete cluster --name eks-oncdecb36 --region ap-southeast-1
+````
 
 
-
-### 1. Setup MariaDB 
+### 1. Setup Mysql
 - wait for cluster and rds creation
 - Create Mysql instance using AWS RDS. and connect to cluster worker node
 - Connect to your RDS instance :
