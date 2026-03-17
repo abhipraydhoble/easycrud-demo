@@ -1,4 +1,4 @@
-# 🖥️ Launch instance (ubuntu) and use below user data to setup eks cluster
+# 🖥️ Launch instance and use below user data to setup eks cluster
 
 ````
 #!/bin/bash
