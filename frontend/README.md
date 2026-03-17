@@ -18,3 +18,4 @@
 ### Apply manifest file and copy frontend service link and check
 
 <img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/7887b394-6608-4894-8a67-1b829d985d6e" />
+<img width="1116" height="895" alt="image" src="https://github.com/user-attachments/assets/40b9ad2d-bd0d-40f5-bd8b-6be127999aac" />
