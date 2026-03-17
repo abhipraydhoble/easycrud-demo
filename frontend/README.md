@@ -1,56 +1,17 @@
-# React Project Setup and Deployment Guide for Windows
+### Edit .env file and add Backend service url
 
-This guide provides step-by-step instructions for setting up a React project.
+<img width="1182" height="51" alt="image" src="https://github.com/user-attachments/assets/1ee5d68e-33bc-4888-82b1-e1fa52e0a91f" />
 
-## 1. Setting Up the React Project
+---
 
-### Install Node.js and npm
+### Build Docker Image and push to Dockerhub
 
-```shell
-apt update && apt install nodejs npm -y
-```
+---
 
-### Verify Installation
+### Edit frontend.yaml and change image name
 
+---
 
-```shell
-node -v
-npm -v
-```
+### Apply manifest file and copy frontend service link and check
 
-
-## 2. Install Dependencies
-
-To install the necessary dependencies for your project, run the following command:
-
-```shell
-npm install
-```
-
-## 3. Build the React Application for Production
-
-Update backend URL in .env file
-
-```shell
-vim .env 
-
-    VITE_API_URL = "http://<BACKEND_PUBLIC_IP>:8080/api"
-```
-
-To build the React application for production, run:
-
-```shell
-npm run build
-```
-
-This will create a dist/ directory in your project containing optimized, production-ready files.
-
-## 4. Deploy production-ready files on s3 or apache2 server
-
-```shell
-apt install apache2 -y
-systemctl start apache2
-cp -rf dist/* /var/www/html/
-```
-
-You can access the application on http://localhost:80
+<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/7887b394-6608-4894-8a67-1b829d985d6e" />
