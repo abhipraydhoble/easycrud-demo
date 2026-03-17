@@ -47,7 +47,7 @@ eksctl delete cluster --name eks-oncdecb36 --region ap-southeast-1
 ````
 
 ---
-###  Setup Mysql
+### 🐬 Setup Mysql
 - wait for cluster and rds creation
 - Create Mysql instance using AWS RDS. and connect to cluster worker node
 - Connect to your RDS instance :
