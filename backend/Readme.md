@@ -10,6 +10,8 @@ sudo chmod 777 /var/run/docker.sock
 docker --version
 ````
 ---
+### Edit Application.properties file and add db credentials
+<img width="1686" height="947" alt="image" src="https://github.com/user-attachments/assets/a57dc59d-6ca2-4aad-abe2-587fc6fc39da" />
 
 ### Create Docker Image and Push to DockerHub
 
