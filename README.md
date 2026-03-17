@@ -1,4 +1,5 @@
-# EKS Cluster Setup
+#🖥️ Launch and ec2 instance (ubuntu) and use below user data script to setup eks cluster
+
 ````
 #!/bin/bash
 
@@ -48,8 +49,8 @@ aws eks update-kubeconfig --name eks-oncdecb36
 eksctl delete cluster --name eks-oncdecb36 --region ap-southeast-1
 ````
 
-
-### 1. Setup Mysql
+---
+###  Setup Mysql
 - wait for cluster and rds creation
 - Create Mysql instance using AWS RDS. and connect to cluster worker node
 - Connect to your RDS instance :
