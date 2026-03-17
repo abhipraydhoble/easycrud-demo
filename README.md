@@ -3,28 +3,25 @@
 ````
 #!/bin/bash
 
-# Update system
-apt update -y
-
-# Install basic tools
-apt install -y curl unzip
+sudo apt update -y
+sudo apt install -y curl unzip
 
 # Install AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
-./aws/install
+sudo ./aws/install
 
 # Install kubectl
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 # Install eksctl
 curl --silent --location \
 "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" \
 | tar xz -C /tmp
 
-mv /tmp/eksctl /usr/local/bin
-chmod +x /usr/local/bin/eksctl
+sudo mv /tmp/eksctl /usr/local/bin
+sudo chmod +x /usr/local/bin/eksctl
 ````
 ````
 aws --version
