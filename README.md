@@ -1,4 +1,4 @@
-#🖥️ Launch and ec2 instance (ubuntu) and use below user data script to setup eks cluster
+# 🖥️ Launch and ec2 instance (ubuntu) and use below user data script to setup eks cluster
 
 ````
 #!/bin/bash
