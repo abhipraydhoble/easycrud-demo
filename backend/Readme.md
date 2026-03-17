@@ -1,73 +1,32 @@
-# Spring Boot Backend Deployment Guide 
+### Install Dockerr 
+````
+sudo apt update -y
+sudo apt install docker.io  -y
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker ubuntu
+newgrp docker
+sudo chmod 777 /var/run/docker.sock
+docker --version
+````
+---
 
-## Prerequisites
+### Create Docker Image and Push to DockerHub
 
-- Java Development Kit (JDK 17 or higher) installed.
-- Maven installed.
-- Spring Boot application source code or JAR file.
+````
+docker build -t abhipraydh96/backend .
+````
 
-## Step 1: Install Java
+````
+docker push abhipraydh96/backend
+````
+---
 
-1. Verify if Java is installed by running the following command:
+### Edit backend.yaml and update docker image
 
-   ```bash
-   java -version
-   ```
+---
 
-If Java is not installed, install the JDK from OpenJDK.
+### Apply manifest files 
 
-```shell
-apt update && apt install openjdk-17-jdk -y
-java -version
-```
-
-## Step 2: Install Maven
-
-Installing maven in ubuntu:
-
-```shell
-apt install maven -y
-```
-
-### Verify Maven installation:
-
-```bash
-
-mvn -version
-```
-
-## Step 3: Build the Spring Boot Application
-
-### Update DB credentials in application.properties:
-
-```shell
-vim backend/src/main/resources/application.properties
-
-   server.port=8080
-   spring.datasource.url=jdbc:mariadb://<DB_HOST>:3306/<DB_NAME>
-   spring.datasource.username=<DB_USER>
-   spring.datasource.password=<DB_PASS>
-```
-
-### Build springboot Application using maven
-
-```shell
-mvn clean package
-```
-
-## Step 4: Run the Application
-
-Run the generated JAR file by using the following command:
-
-```bash
-
-java -jar target\spring-backend-v1.jar
-```
-
-The application will start and be accessible at:
-
-http://localhost:8080
-
-### Step 5: Keep the Application Running
-
-To keep the application running in the background, you can use nohup or a similar method. 
+---
+### Copy backend service link and paste to frontend dir .env file 
