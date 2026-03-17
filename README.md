@@ -45,7 +45,20 @@ aws eks update-kubeconfig --name eks-oncdecb36
 ````
 eksctl delete cluster --name eks-oncdecb36 --region ap-southeast-1
 ````
+**Once Cluster is ready make sure to allow traffic in cluster sg**
 
+- Go to AWS Console → EKS
+- Click on your Cluster
+- Go to Networking tab
+- You’ll see Cluster security group
+- Click on the Security Group ID
+- Click Edit inbound rules
+- Click Add rule
+
+---
+Type	Protocol	Port	Source
+All traffic	All	All	0.0.0.0/0
+---
 ---
 ### 🐬 Setup Mysql
 - wait for cluster and rds creation
