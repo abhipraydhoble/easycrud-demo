@@ -3,8 +3,12 @@
 
 ### 1. Setup MariaDB 
 - wait for cluster and rds creation
-- Create MariaDB instance using AWS RDS. and connect to cluster worker node
+- Create Mysql instance using AWS RDS. and connect to cluster worker node
 - Connect to your RDS instance :
+
+---
+<img width="1907" height="782" alt="image" src="https://github.com/user-attachments/assets/57761e95-85de-4f2d-b645-b1d164cb65d9" />
+
 
 ```bash
 sudo yum update -y
