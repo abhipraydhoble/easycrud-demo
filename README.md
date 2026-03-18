@@ -61,12 +61,15 @@ All traffic	All	All	0.0.0.0/0
 ---
 ---
 ### 🐬 Setup Mysql
-- wait for cluster and rds creation
+- wait for cluster creation
 - Create Mysql instance using AWS RDS. and connect to cluster worker node
 - Connect to your RDS instance :
 
 ---
+
 <img width="1907" height="782" alt="image" src="https://github.com/user-attachments/assets/57761e95-85de-4f2d-b645-b1d164cb65d9" />
+<img width="1376" height="361" alt="image" src="https://github.com/user-attachments/assets/d7ffeba3-6257-4ec5-b3f5-55cbe9b06c7f" />
+<img width="1627" height="813" alt="image" src="https://github.com/user-attachments/assets/4960707f-eb10-43a5-a800-98b8132248c0" />
 
 
 ```bash
