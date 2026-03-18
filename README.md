@@ -56,8 +56,8 @@ eksctl delete cluster --name eks-oncdecb36 --region ap-southeast-1
 - Click Add rule
 
 ---
-Type	Protocol	Port	Source
-All traffic	All	All	0.0.0.0/0
+Type	|Protocol	|Port	|Source
+All   |traffic	|All	|All	0.0.0.0/0
 ---
 ---
 ### 🐬 Setup Mysql
